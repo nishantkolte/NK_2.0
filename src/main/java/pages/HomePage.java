@@ -20,4 +20,7 @@ public class HomePage {
 	@FindBy (xpath="//a[contains(text(),\"Login Management\")]")
 	public static WebElement LoginManagementLink;
 	
+	@FindBy (xpath="//a[contains(text(),\"sitemap\")]")
+	public static WebElement Sitemap;
+	
 }
