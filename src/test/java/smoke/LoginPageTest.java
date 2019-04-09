@@ -30,7 +30,7 @@ public class LoginPageTest {
 	driver.manage().window().maximize();
 	initPages();
 	}
-
+//updated from GITHUB
 	@Test (priority=1, groups="smoke") 
 	public void successful_Login_Test() throws InterruptedException, IOException{
 	try{	
