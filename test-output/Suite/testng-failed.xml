@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
+  <parameter name="browser" value="chrome"/>
+  <parameter name="url" value="https://auth-qa.mercer.com/QAWORK/login"/>
+  <test name="Test">
+    <parameter name="browser" value="chrome"/>
+    <parameter name="url" value="https://auth-qa.mercer.com/QAWORK/login"/>
+    <classes>
+      <class name="smoke.LoginPageTest"/>
+    </classes>
+  </test> <!-- Test -->
+  <test name="Test(failed)">
+    <parameter name="browser" value="chrome"/>
+    <parameter name="url" value="https://auth-qa.mercer.com/QAWORK/login"/>
+    <classes>
+      <class name="smoke.LoginPageTest">
+        <methods>
+          <include name="after"/>
+          <include name="invalid_Login_Test" invocation-numbers="0"/>
+          <include name="initDriver"/>
+        </methods>
+      </class> <!-- smoke.LoginPageTest -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->
