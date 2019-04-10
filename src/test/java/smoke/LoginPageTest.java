@@ -37,7 +37,7 @@ public class LoginPageTest {
 		TestListeners.test.setDescription("to verifiy successful login with valid credentials");
 		
 	Functions.setText(LoginPage.Username, "auto_qawork0004@mas.com");
-	Functions.setText(LoginPage.Password, "QAWORKpass1");
+	Functions.setText(LoginPage.Password, "QAWORKpass2");
 	Functions.click(LoginPage.LoginButton);
 	Functions.verifyElementDisplayed(MFAPage.MFApageTitle);
 	}
