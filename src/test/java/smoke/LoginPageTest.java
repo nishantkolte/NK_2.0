@@ -11,6 +11,7 @@ import org.testng.annotations.Listeners;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
+import data.TestData;
 import pages.LoginPage;
 import pages.MFAPage;
 import utilities.DriverInit;
@@ -22,22 +23,25 @@ public class LoginPageTest {
 	
 	public static WebDriver driver;
 	
-	@BeforeClass @Parameters("url")
-	public void initDriver(String url){
+	@BeforeClass @Parameters("environment")
+	public void initDriver(String env){
+	InitTestData(env);
+	initPages();
 	driver=DriverInit.driver;
-	driver.get(url);
+	driver.get(TestData.url);
 	driver.manage().timeouts().implicitlyWait(40, TimeUnit.SECONDS);
 	driver.manage().window().maximize();
-	initPages();
+	
 	}
-//updated from GITHUB
+
+
 	@Test (priority=1, groups="smoke") 
 	public void successful_Login_Test() throws InterruptedException, IOException{
 	try{	
 		TestListeners.test.setDescription("to verifiy successful login with valid credentials");
 		
-	Functions.setText(LoginPage.Username, "auto_qawork0004@mas.com");
-	Functions.setText(LoginPage.Password, "QAWORKpass2");
+	Functions.setText(LoginPage.Username, TestData.username);
+	Functions.setText(LoginPage.Password, TestData.password);
 	Functions.click(LoginPage.LoginButton);
 	Functions.verifyElementDisplayed(MFAPage.MFApageTitle);
 	}
@@ -47,28 +51,12 @@ public class LoginPageTest {
 	}
 }
 	
-//	@Test (priority=2, groups="smoke") @Parameters("url")
-//	public void invalidLoginTest(String url) throws InterruptedException, IOException{
-//	try{	
-//		TestListeners.test.setDescription("to verifiy error message on login page when invalid credentials are entered");
-//		driver.get(url);
-//	
-//		
-//	Functions.setText(LoginPage.Username, "auto_qawork0004@mas.com");
-//	Functions.setText(LoginPage.Password, "QAWORKpass2");
-//	Functions.click(LoginPage.LoginButton);
-//	Functions.verifyElementDisplayed(MFAPage.MFApageTitle);
-//	}
-//	catch(Exception e){
-//	e.printStackTrace();
-//	Assert.fail("Test case failed!");
-//	}
-//	}
+
 	@Test (priority=2, groups="smoke")
 	public void invalid_Login_Test() throws InterruptedException, IOException{
 	try{	
 		TestListeners.test.setDescription("to verifiy error message on login page when invalid credentials are entered");
-		driver.get("https://auth-qa.mercer.com/QAWORK/register");
+		driver.get(TestData.url);
 		Thread.sleep(2000);
 		Assert.fail();
 	
@@ -89,6 +77,10 @@ public class LoginPageTest {
 	LoginPage page1=new LoginPage();
 	MFAPage page2=new MFAPage();		
 	}
+
+	private void InitTestData(String env) {
+		TestData data = new TestData(env);
+}
 }
 
 
