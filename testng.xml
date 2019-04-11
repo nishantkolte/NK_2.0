@@ -3,7 +3,7 @@
 <suite name="IBCG2_Smoke">
   <test name="Test">
 	<parameter name='browser' value='chrome' />
-    <parameter name='environment' value='QAI' />
+    <parameter name='environment' value='PROD' />
   <classes>
   <class name="utilities.DriverInit"/>
   <class name="smoke.LoginPageTest"/>

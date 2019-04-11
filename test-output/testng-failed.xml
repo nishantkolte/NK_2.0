@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite guice-stage="DEVELOPMENT" name="Failed suite [IBCG2_Smoke]">
+  <parameter name="environment" value="PROD"/>
   <parameter name="browser" value="chrome"/>
-  <parameter name="url" value="https://auth-qa.mercer.com/QAWORK/login"/>
   <test name="Test">
+    <parameter name="environment" value="PROD"/>
     <parameter name="browser" value="chrome"/>
-    <parameter name="url" value="https://auth-qa.mercer.com/QAWORK/login"/>
     <classes>
       <class name="utilities.DriverInit"/>
       <class name="smoke.LoginPageTest"/>
     </classes>
   </test> <!-- Test -->
   <test name="Test(failed)">
+    <parameter name="environment" value="PROD"/>
     <parameter name="browser" value="chrome"/>
-    <parameter name="url" value="https://auth-qa.mercer.com/QAWORK/login"/>
     <classes>
       <class name="smoke.LoginPageTest">
         <methods>

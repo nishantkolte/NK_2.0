@@ -2,31 +2,31 @@
 <testng-results skipped="0" failed="1" total="2" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="IBCG2_Smoke" duration-ms="44516" started-at="2019-04-09T19:06:24Z" finished-at="2019-04-09T19:07:08Z">
+  <suite name="IBCG2_Smoke" duration-ms="39600" started-at="2019-04-11T19:00:53Z" finished-at="2019-04-11T19:01:33Z">
     <groups>
       <group name="smoke">
         <method signature="LoginPageTest.invalid_Login_Test()[pri:2, instance:smoke.LoginPageTest@6d4b1c02]" name="invalid_Login_Test" class="smoke.LoginPageTest"/>
         <method signature="LoginPageTest.successful_Login_Test()[pri:1, instance:smoke.LoginPageTest@6d4b1c02]" name="successful_Login_Test" class="smoke.LoginPageTest"/>
       </group> <!-- smoke -->
     </groups>
-    <test name="Test" duration-ms="44516" started-at="2019-04-09T19:06:24Z" finished-at="2019-04-09T19:07:08Z">
+    <test name="Test" duration-ms="39600" started-at="2019-04-11T19:00:53Z" finished-at="2019-04-11T19:01:33Z">
       <class name="smoke.LoginPageTest">
-        <test-method status="PASS" signature="initDriver(java.lang.String)[pri:0, instance:smoke.LoginPageTest@6d4b1c02]" name="initDriver" is-config="true" duration-ms="29769" started-at="2019-04-10T00:36:27Z" finished-at="2019-04-10T00:36:57Z">
+        <test-method status="PASS" signature="initDriver(java.lang.String)[pri:0, instance:smoke.LoginPageTest@6d4b1c02]" name="initDriver" is-config="true" duration-ms="22228" started-at="2019-04-12T00:30:58Z" finished-at="2019-04-12T00:31:20Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[https://auth-qa.mercer.com/QAWORK/login]]>
+                <![CDATA[PROD]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initDriver -->
-        <test-method status="PASS" signature="successful_Login_Test()[pri:1, instance:smoke.LoginPageTest@6d4b1c02]" name="successful_Login_Test" duration-ms="6530" started-at="2019-04-10T00:36:57Z" finished-at="2019-04-10T00:37:03Z">
+        <test-method status="PASS" signature="successful_Login_Test()[pri:1, instance:smoke.LoginPageTest@6d4b1c02]" name="successful_Login_Test" duration-ms="8120" started-at="2019-04-12T00:31:20Z" finished-at="2019-04-12T00:31:29Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- successful_Login_Test -->
-        <test-method status="FAIL" signature="invalid_Login_Test()[pri:2, instance:smoke.LoginPageTest@6d4b1c02]" name="invalid_Login_Test" duration-ms="4658" started-at="2019-04-10T00:37:03Z" finished-at="2019-04-10T00:37:08Z">
+        <test-method status="FAIL" signature="invalid_Login_Test()[pri:2, instance:smoke.LoginPageTest@6d4b1c02]" name="invalid_Login_Test" duration-ms="3202" started-at="2019-04-12T00:31:29Z" finished-at="2019-04-12T00:31:32Z">
           <exception class="java.lang.AssertionError">
             <message>
               <![CDATA[null]]>
@@ -35,7 +35,7 @@
               <![CDATA[java.lang.AssertionError: null
 	at org.testng.Assert.fail(Assert.java:94)
 	at org.testng.Assert.fail(Assert.java:101)
-	at smoke.LoginPageTest.invalid_Login_Test(LoginPageTest.java:73)
+	at smoke.LoginPageTest.invalid_Login_Test(LoginPageTest.java:61)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -66,13 +66,13 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- invalid_Login_Test -->
-        <test-method status="PASS" signature="after()[pri:0, instance:smoke.LoginPageTest@6d4b1c02]" name="after" is-config="true" duration-ms="276" started-at="2019-04-10T00:37:08Z" finished-at="2019-04-10T00:37:08Z">
+        <test-method status="PASS" signature="after()[pri:0, instance:smoke.LoginPageTest@6d4b1c02]" name="after" is-config="true" duration-ms="629" started-at="2019-04-12T00:31:32Z" finished-at="2019-04-12T00:31:33Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- after -->
       </class> <!-- smoke.LoginPageTest -->
       <class name="utilities.DriverInit">
-        <test-method status="PASS" signature="getBrowser(java.lang.String)[pri:0, instance:utilities.DriverInit@7cd62f43]" name="getBrowser" is-config="true" duration-ms="2790" started-at="2019-04-10T00:36:24Z" finished-at="2019-04-10T00:36:27Z">
+        <test-method status="PASS" signature="getBrowser(java.lang.String)[pri:0, instance:utilities.DriverInit@7cd62f43]" name="getBrowser" is-config="true" duration-ms="4838" started-at="2019-04-12T00:30:53Z" finished-at="2019-04-12T00:30:58Z">
           <params>
             <param index="0">
               <value>
