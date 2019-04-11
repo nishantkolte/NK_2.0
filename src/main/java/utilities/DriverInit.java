@@ -7,7 +7,9 @@ import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Parameters;
 
-public class DriverInit {
+import smoke.LoginPageTest;
+
+public class DriverInit extends LoginPageTest {
 public static WebDriver driver;
 	
 	@BeforeTest @Parameters("browser")

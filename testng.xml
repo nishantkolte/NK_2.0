@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="IBCG2_Smoke">
+<suite name="IBCG2_Smoke_Suite">
   <test name="Test">
-	<parameter name='browser' value='chrome' />
-    <parameter name='environment' value='PROD' />
-  <classes>
-  <class name="utilities.DriverInit"/>
-  <class name="smoke.LoginPageTest"/>
-  </classes>
+    <parameter name="environment" value="QAI"/>
+    <parameter name="browser" value="chrome"/>
+    <classes>
+      <class name="utilities.DriverInit"/>
+      <class name="smoke.LoginPageTest"/>
+    </classes>
   </test> <!-- Test -->
-</suite> <!-- Suite- -->
+</suite> <!-- IBCG2_Smoke_Suite -->
