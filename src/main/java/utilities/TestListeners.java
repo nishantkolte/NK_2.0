@@ -1,11 +1,13 @@
 package utilities;
 
+import java.io.File;
 import java.io.IOException;
 
 import org.openqa.selenium.WebDriver;
 import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
+
 import com.relevantcodes.extentreports.ExtentReports;
 import com.relevantcodes.extentreports.ExtentTest;
 import com.relevantcodes.extentreports.LogStatus;
@@ -18,14 +20,13 @@ public class TestListeners implements ITestListener {
 	public void onFinish(ITestContext result) {
 		report.endTest(test);
 		report.flush();
-
 		
 	}
 
 	@Override
 	public void onStart(ITestContext result) {
 		report = new ExtentReports(System.getProperty("user.dir")+"\\Reports\\"+result.getSuite().getName()+"_Report.html");
-		
+		report.loadConfig(new File (System.getProperty("user.dir")+"\\Reports\\config.xml"));
 	}
 	
 	@Override
@@ -59,7 +60,7 @@ public class TestListeners implements ITestListener {
 	public void onTestSuccess(ITestResult result) {
 		
 		test.log(LogStatus.PASS,result.getInstanceName()+" : "+result.getName()+" -- PASSED");
-
+		
 		
 	}
 

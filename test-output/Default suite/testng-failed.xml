@@ -11,7 +11,7 @@
       <class name="smoke.LoginPageTest">
         <methods>
           <include name="successful_Login_Test"/>
-          <include name="invalidLoginTest"/>
+          <include name="invalid_Login_Test"/>
         </methods>
       </class> <!-- smoke.LoginPageTest -->
     </classes>
