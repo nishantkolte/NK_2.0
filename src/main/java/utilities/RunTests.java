@@ -17,7 +17,7 @@ import smoke.LoginPageTest;
 
 public class RunTests {
 
-       public static void main(String[] args) throws IOException {
+       public static void run(String[] args) throws IOException {
     	ClassLoader loader = new RunTests().getClass().getClassLoader();
 
               TestNG mytestng =new TestNG();

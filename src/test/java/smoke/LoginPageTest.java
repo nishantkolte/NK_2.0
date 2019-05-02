@@ -23,7 +23,8 @@ public class LoginPageTest {
 	
 	public static WebDriver driver;
 	
-	@BeforeClass @Parameters("environment")
+	@Parameters("environment")
+	@BeforeClass (groups="smoke")
 	public void initDriver(String env){
 	InitTestData(env);
 	initPages();
@@ -58,7 +59,8 @@ public class LoginPageTest {
 		TestListeners.test.setDescription("to verifiy error message on login page when invalid credentials are entered");
 		driver.get(TestData.url);
 		Thread.sleep(2000);
-		Assert.fail();
+		Functions.verifyElementDisplayed(MFAPage.MFApageTitle);
+		//Assert.fail();
 	
 	}
 	catch(Exception e){

@@ -1,10 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="IBCG2_Smoke_Suite" >
+	 <!-- listeners-->
+	 	<!-- listener class-name="utilities.TestListeners"--><!--  /listener-->
+	 <!--/listeners  -->
   <test name="Test">
     <parameter name="browser" value="chrome"/>
     <parameter name="environment" value="QAI"/>
-    
+    <groups>
+    	<run>
+    		<include name="smoke"/>
+    	</run>
+    </groups>
     <classes>
       <class name="utilities.DriverInit"/>
       <class name="smoke.LoginPageTest"/>

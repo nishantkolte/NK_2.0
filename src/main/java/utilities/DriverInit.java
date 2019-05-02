@@ -10,7 +10,7 @@ import org.testng.annotations.Parameters;
 public class DriverInit{
 public static WebDriver driver;
 	
-	@BeforeTest @Parameters("browser")
+	@BeforeTest(groups="smoke") @Parameters("browser")
 	public void getBrowser(String browser) {
 	
 	if (browser.equalsIgnoreCase("ie")){

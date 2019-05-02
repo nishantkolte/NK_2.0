@@ -91,7 +91,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">4 methods, 1 failed,  2 skipped,  1 passed</span>
+                    <span class="method-stats">2 methods, 1 failed,   1 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title failed">Failed methods</span>
@@ -102,29 +102,10 @@
                     <div class="method-list-content failed suite-IBCG2_Smoke_Suite">
                       <span>
                         <img width="3%" src="failed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-IBCG2_Smoke_Suite" title="utilities.DriverInit" hash-for-method="invalid_Login_Test">invalid_Login_Test</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                    </div> <!-- method-list-content failed suite-IBCG2_Smoke_Suite -->
-                  </li>
-                  <li>
-                    <span class="method-list-title skipped">Skipped methods</span>
-                    <span class="show-or-hide-methods skipped">
-                      <a href="#" panel-name="suite-IBCG2_Smoke_Suite" class="hide-methods skipped suite-IBCG2_Smoke_Suite"> (hide)</a> <!-- hide-methods skipped suite-IBCG2_Smoke_Suite -->
-                      <a href="#" panel-name="suite-IBCG2_Smoke_Suite" class="show-methods skipped suite-IBCG2_Smoke_Suite"> (show)</a> <!-- show-methods skipped suite-IBCG2_Smoke_Suite -->
-                    </span>
-                    <div class="method-list-content skipped suite-IBCG2_Smoke_Suite">
-                      <span>
-                        <img width="3%" src="skipped.png"/>
                         <a href="#" class="method navigator-link" panel-name="suite-IBCG2_Smoke_Suite" title="smoke.LoginPageTest" hash-for-method="invalid_Login_Test">invalid_Login_Test</a> <!-- method navigator-link -->
                       </span>
                       <br/>
-                      <span>
-                        <img width="3%" src="skipped.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-IBCG2_Smoke_Suite" title="smoke.LoginPageTest" hash-for-method="successful_Login_Test">successful_Login_Test</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                    </div> <!-- method-list-content skipped suite-IBCG2_Smoke_Suite -->
+                    </div> <!-- method-list-content failed suite-IBCG2_Smoke_Suite -->
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -135,7 +116,7 @@
                     <div class="method-list-content passed suite-IBCG2_Smoke_Suite">
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-IBCG2_Smoke_Suite" title="utilities.DriverInit" hash-for-method="successful_Login_Test">successful_Login_Test</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-IBCG2_Smoke_Suite" title="smoke.LoginPageTest" hash-for-method="successful_Login_Test">successful_Login_Test</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-IBCG2_Smoke_Suite -->
@@ -153,25 +134,6 @@
           <div class="suite-IBCG2_Smoke_Suite-class-failed">
             <div class="main-panel-header rounded-window-top">
               <img src="failed.png"/>
-              <span class="class-name">utilities.DriverInit</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="invalid_Login_Test">
-                  </a> <!-- invalid_Login_Test -->
-                  <span class="method-name">invalid_Login_Test</span>
-                  <div class="stack-trace">java.lang.AssertionError: null
-	at smoke.LoginPageTest.invalid_Login_Test(LoginPageTest.java:61)
-... Removed 26 stack frames
-</div> <!-- stack-trace -->
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-IBCG2_Smoke_Suite-class-failed -->
-          <div class="suite-IBCG2_Smoke_Suite-class-skipped">
-            <div class="main-panel-header rounded-window-top">
-              <img src="skipped.png"/>
               <span class="class-name">smoke.LoginPageTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
@@ -180,21 +142,18 @@
                   <a name="invalid_Login_Test">
                   </a> <!-- invalid_Login_Test -->
                   <span class="method-name">invalid_Login_Test</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="successful_Login_Test">
-                  </a> <!-- successful_Login_Test -->
-                  <span class="method-name">successful_Login_Test</span>
+                  <div class="stack-trace">java.lang.AssertionError: null
+	at smoke.LoginPageTest.invalid_Login_Test(LoginPageTest.java:62)
+... Removed 26 stack frames
+</div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-IBCG2_Smoke_Suite-class-skipped -->
+          </div> <!-- suite-IBCG2_Smoke_Suite-class-failed -->
           <div class="suite-IBCG2_Smoke_Suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">utilities.DriverInit</span>
+              <span class="class-name">smoke.LoginPageTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
@@ -219,6 +178,11 @@
   &lt;test name=&quot;Test&quot;&gt;
     &lt;parameter name=&quot;environment&quot; value=&quot;QAI&quot;/&gt;
     &lt;parameter name=&quot;browser&quot; value=&quot;chrome&quot;/&gt;
+    &lt;groups&gt;
+      &lt;run&gt;
+        &lt;include name=&quot;smoke&quot;/&gt;
+      &lt;/run&gt;
+    &lt;/groups&gt;
     &lt;classes&gt;
       &lt;class name=&quot;utilities.DriverInit&quot;/&gt;
       &lt;class name=&quot;smoke.LoginPageTest&quot;/&gt;
@@ -273,23 +237,15 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(4);
+data.addRows(2);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'successful_Login_Test')
-data.setCell(0, 2, 'utilities.DriverInit')
-data.setCell(0, 3, 11153);
+data.setCell(0, 2, 'smoke.LoginPageTest')
+data.setCell(0, 3, 10504);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'invalid_Login_Test')
-data.setCell(1, 2, 'utilities.DriverInit')
-data.setCell(1, 3, 3506);
-data.setCell(2, 0, 2)
-data.setCell(2, 1, 'invalid_Login_Test')
-data.setCell(2, 2, 'smoke.LoginPageTest')
-data.setCell(2, 3, 4);
-data.setCell(3, 0, 3)
-data.setCell(3, 1, 'successful_Login_Test')
-data.setCell(3, 2, 'smoke.LoginPageTest')
-data.setCell(3, 3, 3);
+data.setCell(1, 2, 'smoke.LoginPageTest')
+data.setCell(1, 3, 3524);
 window.suiteTableData['IBCG2_Smoke_Suite']= { tableData: data, tableDiv: 'times-div-IBCG2_Smoke_Suite'}
 return data;
 }
@@ -325,40 +281,22 @@ return data;
                 <span class="method-name">getBrowser(chrome)</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-test before -->
-              <div class="configuration-class before">
-                <span class="method-name">initDriver(QAI)</span>
-                <span class="method-start">4754 ms</span>
-              </div> <!-- configuration-class before -->
-              <div class="test-method">
-                <span class="method-name">successful_Login_Test</span>
-                <span class="method-start">21163 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <img src="failed.png">
-                </img>
-                <span class="method-name">invalid_Login_Test</span>
-                <span class="method-start">32318 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-class after">
-                <span class="method-name">after</span>
-                <span class="method-start">36148 ms</span>
-              </div> <!-- configuration-class after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">smoke.LoginPageTest</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
-                <img src="failed.png">
-                </img>
                 <span class="method-name">initDriver(QAI)</span>
-                <span class="method-start">36413 ms</span>
+                <span class="method-start">3331 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
                 <span class="method-name">successful_Login_Test</span>
-                <span class="method-start">36486 ms</span>
+                <span class="method-start">22910 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
+                <img src="failed.png">
+                </img>
                 <span class="method-name">invalid_Login_Test</span>
-                <span class="method-start">36494 ms</span>
+                <span class="method-start">33417 ms</span>
               </div> <!-- test-method -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

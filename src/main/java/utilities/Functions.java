@@ -45,7 +45,7 @@ public class Functions {
 		Actions action = new Actions(driver);
 		action.doubleClick(element).build().perform();
 	}
-	
+
 	public static void verifyElementDisplayed(WebElement element) throws InterruptedException{
 		Thread.sleep(1000);
 		Assert.assertTrue(element.isDisplayed());

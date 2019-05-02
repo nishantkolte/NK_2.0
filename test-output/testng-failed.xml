@@ -6,6 +6,11 @@
   <test name="Test">
     <parameter name="environment" value="QAI"/>
     <parameter name="browser" value="chrome"/>
+    <groups>
+      <run>
+        <include name="smoke"/>
+      </run>
+    </groups>
     <classes>
       <class name="utilities.DriverInit"/>
       <class name="smoke.LoginPageTest"/>
@@ -14,10 +19,14 @@
   <test name="Test(failed)">
     <parameter name="environment" value="QAI"/>
     <parameter name="browser" value="chrome"/>
+    <groups>
+      <run>
+        <include name="smoke"/>
+      </run>
+    </groups>
     <classes>
       <class name="smoke.LoginPageTest">
         <methods>
-          <include name="successful_Login_Test"/>
           <include name="invalid_Login_Test"/>
           <include name="initDriver"/>
         </methods>
@@ -25,9 +34,6 @@
       <class name="utilities.DriverInit">
         <methods>
           <include name="getBrowser"/>
-          <include name="after"/>
-          <include name="invalid_Login_Test"/>
-          <include name="initDriver"/>
         </methods>
       </class> <!-- utilities.DriverInit -->
     </classes>
